@@ -2,7 +2,9 @@
 from flask import Flask
 app = Flask(__name__)
 
-from bb import BB
+#from bb import BB
+import bb
+#from bb import *
 
 @app.route('/')
 def hello_world():
@@ -16,7 +18,7 @@ def bye():
 
 @app.route('/bb')
 def bbb():
-    BigB = BB()
+    BigB = bb.BB()
     # neu = BigB * 7
     return "Die gesamten benötigten Big Blinds sind: %s" % (BigB)
 
