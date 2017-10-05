@@ -11,13 +11,17 @@ def hello_world():
     return 'Hello, World!'
 
 @app.route('/bb')
-def bba():
+def bb():
+    startst = functions.starts()
     BigBa = functions.BBS()
-    return "Am Start werden insgesamt  %s Big Blinds benötigt." % (BigBa)
+    BigBe = functions.BBE()
+    zeite = functions.zeitf()
+    levelanz = functions.level()
+    bbmulti = functions.bbmult()
+    bigbaa = functions.BBSA()
+    sbaa = functions.SBSA()
+    return "Jeder Spieler bekommt am Anfang %s Chips, die Blinds sind zunächst %s/%s. Nach %s Minuten sollen %s Big Blinds insgesamt übrig bleiben, also nach %s Leveln. BB-Multiplikator: %s. Die Blindstruktur lautet dann folgendermaßen:" % (startst, bigbaa, sbaa, zeite, BigBe, levelanz, bbmulti)
 
-#print "Am Ende sollen insgesamt %s Big Blinds für alle verbliebenen Spieler übrig bleiben." % (gesbbe)
-
-# # bye(v1, v2):
 #     v = get(v1)
 #     return render(mei.html, v, n)
 #
