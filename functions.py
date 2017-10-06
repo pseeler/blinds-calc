@@ -1,5 +1,5 @@
-chips = 250000                 # Gesamte Chips im Spiel
-anz = 27                       # Anzahl Teilnehmer
+chips = 250000                # Gesamte Chips im Spiel
+anz = 27                      # Anzahl Teilnehmer
 bbpro = 100                   # Big Blinds pro Teilnehmer zu Beginn
 gesbbe = 20                   # Gesamte Big Blinds nach bestimmter Zeit
 zeit = 120                    # Zeit, bis gesbbe erreicht wird (in Minuten)
@@ -9,29 +9,30 @@ start = chips / anz           # Startstack pro Spieler
 gesbb = anz * bbpro           # Gesamte BB am Start
 lev = zeit / llen             # Anzahl Level
 mult = gesbb / gesbbe         # BB - Multiplikator
-bbstart = start / bbpro # Start- BB
+bbstart = start / bbpro       # Start- BB
 sbstart = bbstart / 2         # Start- SB
 
 def starts():
-    return start
+    start = chips / anz
+    return int(round(start))
 
 def BBS():
-    return gesbb
+    return int(round(gesbb))
 
 def BBE():
-    return gesbbe
+    return int(round(gesbbe))
 
 def zeitf():
-    return zeit
+    return int(round(zeit))
 
 def level():
-    return lev
+    return int(round(lev))
 
 def bbmult():
-    return mult
+    return int(round(mult))
 
 def BBSA():
-    return bbstart
+    return int(round(bbstart))
 
 def SBSA():
-    return sbstart
+    return int(round(sbstart))

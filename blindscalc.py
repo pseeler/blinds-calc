@@ -20,7 +20,15 @@ def bb():
     bbmulti = functions.bbmult()
     bigbaa = functions.BBSA()
     sbaa = functions.SBSA()
-    return "Jeder Spieler bekommt am Anfang %s Chips, die Blinds sind zunächst %s/%s. Nach %s Minuten sollen %s Big Blinds insgesamt übrig bleiben, also nach %s Leveln. BB-Multiplikator: %s. Die Blindstruktur lautet dann folgendermaßen:" % (startst, bigbaa, sbaa, zeite, BigBe, levelanz, bbmulti)
+    # put all numbers into one sentence, that gets returned
+    result = "Jeder Spieler bekommt am Anfang %s Chips, " \
+             "die Blinds sind zunächst %s/%s. " \
+             "Nach %s Minuten sollen %s Big Blinds insgesamt übrig bleiben, " \
+             "also nach %s Leveln. " \
+             "BB-Multiplikator: %s. " \
+             "Die Blindstruktur lautet dann folgendermaßen:" \
+             % (startst, bigbaa, sbaa, zeite, BigBe, levelanz, bbmulti)
+    return result
 
 #     v = get(v1)
 #     return render(mei.html, v, n)
@@ -28,3 +36,6 @@ def bb():
 # hahaha
 #
 # <p> {{v}} Peter! </p>
+
+# start app like this:
+# $ FLASK_APP=blinds-calc/blindscalc.py flask run
