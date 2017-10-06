@@ -3,7 +3,7 @@ from flask import Flask
 app = Flask(__name__)
 
 #from functions import BB
-import functions
+import functions as f
 #from functions import *
 
 @app.route('/')
@@ -12,14 +12,14 @@ def hello_world():
 
 @app.route('/bb')
 def bb():
-    startst = functions.starts()
-    BigBa = functions.BBS()
-    BigBe = functions.BBE()
-    zeite = functions.zeitf()
-    levelanz = functions.level()
-    bbmulti = functions.bbmult()
-    bigbaa = functions.BBSA()
-    sbaa = functions.SBSA()
+    startst = f.starts()
+    BigBa = f.BBS()
+    BigBe = f.BBE()
+    zeite = f.zeitf()
+    levelanz = f.level()
+    bbmulti = f.bbmult()
+    bigbaa = f.BBSA()
+    sbaa = f.SBSA()
     # put all numbers into one sentence, that gets returned
     result = "Jeder Spieler bekommt am Anfang %s Chips, " \
              "die Blinds sind zunächst %s/%s. " \
